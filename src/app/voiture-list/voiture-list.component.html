@@ -1,0 +1,12 @@
+ <div class="container">
+    <div class="row">
+      <div class="col-3" *ngFor="let v of voiture"
+        [routerLink]="['/voiture-details', p.id]">{{v.image}}</a>
+  
+        <p>
+          {{ v.immatriculation }}
+        </p>
+  
+      </div>
+    </div>
+  </div>

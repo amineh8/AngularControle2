@@ -1,0 +1,36 @@
+<div class="container mt-5 mb-5">
+    <h1>Product Details</h1>
+    <div class="card-columns" *ngFor="let v of (voiture | selectedVoiture: id)">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Marque</h5>
+          <p class="card-text">{{v.marque}</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Immatriculation</h5>
+          <p class="card-text">{{v.immatriculation}}</p>
+        </div>
+      </div>
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Siege</h5>
+          <p class="card-text">{{v.siege}}</p>
+        </div>
+      </div>
+       <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Couleur</h5>
+          <p class="card-text">${{v.couleur}}</p>
+        </div>
+      </div>
+       <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">Image</h5>
+          <img [src]="v.image" alt="" srcset="" />
+        </div>
+      </div>
+    </div>
+    <a class="btn btn-primary" [routerLink]="['/voiture-list']">Retour </a>
+</div>
